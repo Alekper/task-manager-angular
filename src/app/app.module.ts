@@ -14,7 +14,6 @@ import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserInfoComponent } from './components/profile/user-info/user-info.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserListComponent } from './components/profile/user-list/user-list.component';
-import { SearchPipe } from './components/profile/user-list/search.pipe';
 import { UserCreateComponent } from './Components/profile/user-create/user-create.component';
 
 @NgModule({
@@ -27,7 +26,7 @@ import { UserCreateComponent } from './Components/profile/user-create/user-creat
     ProfileComponent,
     UserInfoComponent,
     UserListComponent,
-    SearchPipe,
+    
     UserCreateComponent
   ],
   imports: [
