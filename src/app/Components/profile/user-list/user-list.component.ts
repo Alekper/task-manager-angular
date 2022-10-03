@@ -10,7 +10,6 @@ import { AuthServiceService } from 'src/app/Services/auth-service.service';
 export class UserListComponent implements OnInit {
 
   constructor(private authService: AuthServiceService) { }
-  searchResult: string = ''
   userArr: IUser[] = []
   ngOnInit(): void {
     this.authService.signIn().subscribe((data: IUser[]) => {
