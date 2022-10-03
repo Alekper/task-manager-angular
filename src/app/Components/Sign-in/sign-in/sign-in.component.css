@@ -1,0 +1,374 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sign-in-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+
+}
+
+.sign-in-container div {
+    margin-bottom: 20px;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.sign-in-container button {
+    margin: 20px 0;
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.sign-in-username,
+.sign-in-password {
+    display: flex;
+    flex-direction: column;
+}
+
+
+button {
+
+    height: 40px !important;
+    width: 200px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    letter-spacing: 3px;
+    background-color: #5920c5;
+    transition: 1s;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.si-btn:hover {
+    background: linear-gradient(90deg, rgba(14, 0, 255, 1) 0%, rgba(149, 52, 176, 1) 52%, rgba(255, 74, 74, 1) 85%);
+
+}
+
+.si-create {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.si-create:hover {
+    text-decoration: underline;
+}
+
+
+#si-main-container {
+    animation: background-animation 15s ease infinite;
+    background: linear-gradient(-45deg, #ee52ba, #5920c5, #fd2ada, #23d5a0);
+    background-size: 400% 400%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    /* padding-bottom: 100px; */
+    overflow: auto;
+}
+
+@keyframes background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+label {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px !important;
+
+}
+
+input {
+    margin-top: 2px;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    border: none;
+    -webkit-text-fill-color: #fff;
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+
+.si-layer {
+    position: absolute;
+    height: 90%;
+    background: #23d5a0;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    /* margin-top: -50px; */
+    left: -5%;
+    align-items: center;
+
+
+}
+
+.su-layer {
+    position: absolute;
+    height: 90%;
+    /* background: #23d5a0; */
+    width: 60%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    z-index: 999;
+    left: 40%;
+}
+
+.layer-animation {
+    animation: layer;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes layer {
+    from {
+        left: -5%;
+        width: 45%;
+    }
+
+    to {
+        left: 40%;
+        width: 60%
+    }
+}
+
+.layer-animation2 {
+    animation: layer2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes layer2 {
+    from {
+        left: 40%;
+        width: 60%;
+    }
+
+    to {
+        left: -5%;
+        width: 45%
+    }
+}
+
+.su-layer h1,
+.si-layer h1 {
+    text-align: center;
+    color: white;
+
+}
+
+.text {
+    height: 500px;
+    writing-mode: vertical-rl;
+    -moz-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -ms-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+
+.text2 {
+    height: 500px;
+
+    writing-mode: vertical-rl;
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+span {
+    font-size: 14px
+}
+
+.su-create {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.su-create:hover {
+    text-decoration: underline;
+}
+
+.si-su-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 768px) {
+    .none {
+        display: none;
+    }
+
+    .unhide {
+        display: flex;
+    }
+
+    #layer {
+        display: none;
+    }
+
+    #si-main-container {
+        align-items: center;
+        overflow-x: hidden;
+        position: relative;
+
+
+    }
+
+    .sign-in-main {
+        top: 50%;
+        position: absolute;
+        margin-top: 0 !important;
+        align-items: center;
+        left: 50%;
+        /* transform: translateY(0); */
+        transform: translate(-50%, -50%);
+        align-items: center;
+    }
+
+    .sign-in-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .si-su-container {
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 150px;
+
+
+    }
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 320px) {
+
+    .si-su-container,
+    .sign-in-container {
+        max-width: 240px !important;
+        overflow-x: hidden;
+    }
+
+
+    input {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .sign-in-main {
+        width: 700px;
+        justify-content: space-evenly;
+    }
+
+    .si-layer {
+
+        width: 230px !important;
+        height: 90%;
+        
+
+    }
+
+
+
+    @keyframes layer {
+        from {
+            left: 5%;
+            width: 460px;
+        }
+
+        to {
+            left: 35%;
+
+            width: 230px;
+        }
+    }
+
+
+    .su-layer {
+
+        width: 460px !important;
+
+        height: 90%;
+
+    }
+
+
+
+    @keyframes layer2 {
+        from {
+            left: 35%;
+        }
+
+        to {
+
+            left: 0%;
+        }
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 1320px) {
+    .sign-in-main {
+        width: 900px;
+        justify-content: space-evenly;
+    }
+}

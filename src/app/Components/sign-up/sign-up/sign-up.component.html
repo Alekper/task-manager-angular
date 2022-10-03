@@ -1,0 +1,75 @@
+<div id="su-main-container">
+    <div class="sign-up-main">
+        <div class="sign-up-container">
+            
+            <form #signUpForm="ngForm">
+
+                <div class="su-fullname">
+                    <div class="sign-up-name br">
+                        <label for="su-name"><span
+                                [ngStyle]="name.invalid && name.touched ? {'color':'red'}:{'color':'white'}">{{name.invalid
+                                && name.touched ? 'Name - Wrong input' : 'Name'}}</span></label>
+                        <input type="text" class="su-short" pattern="[a-zA-Z ]*" #name="ngModel" required minlength="2"
+                            name="name" id="su-name" [(ngModel)]="newUser.name">
+                    </div>
+                    <div class="sign-up-surname br">
+                        <label for="su-surname"><span
+                                [ngStyle]="surname.invalid && surname.touched ? {'color':'red'}:{'color':'white'}">{{surname.invalid
+                                && surname.touched ? 'Surname - Wrong input' : 'Surname'}}</span></label>
+                        <input type="text" class="su-short" #surname="ngModel" pattern="[a-zA-Z ]*" required
+                            minlength="2" name="surname" id="su-surname" [(ngModel)]="newUser.surname">
+                    </div>
+                </div>
+
+                <div class="sign-up-org br">
+                    <label for="su-org"><span
+                            [ngStyle]="org.invalid && org.touched ? {'color':'red'}:{'color':'white'}">{{org.invalid &&
+                            org.touched ? 'Organization name - Wrong input' : 'Organization name'}}</span></label>
+                    <input type="text" class="su-long" #org="ngModel" required name="org" id="su-org"
+                        [(ngModel)]="newUser.organizationName">
+                </div>
+                <div class="sign-up-address br">
+                    <label for="su-address"><span
+                            [ngStyle]="address.invalid && address.touched ? {'color':'red'}:{'color':'white'}">{{address.invalid
+                            && address.touched ? 'Address - Wrong input' : 'Address'}}</span></label>
+                    <input type="text" class="su-long" #address="ngModel" required minlength="4" name="address"
+                        id="su-address" [(ngModel)]="newUser.address">
+                </div>
+                <div class="su-credentials">
+                    <div class="sign-up-email br">
+                        <label for="su-email"><span
+                                [ngStyle]="email.invalid && email.touched ? {'color':'red'}:{'color':'white'}">{{email.invalid
+                                && email.touched ? 'E-mail - Wrong input' : 'E-mail'}}</span></label>
+                        <input type="text" class="su-short" #email="ngModel" email required minlength="4" name="email"
+                            id="su-email" [(ngModel)]="newUser.email">
+                    </div>
+                    <div class="sign-up-phone br">
+                        <label for="su-phone"><span
+                                [ngStyle]="phone.invalid && phone.touched ? {'color':'red'}:{'color':'white'}">{{phone.invalid
+                                && phone.touched ? 'Phone number - Wrong input' : 'Phone number'}}</span></label>
+                        <input type="text" class="su-short" #phone="ngModel" required minlength="10" name="phone"
+                            id="su-phone" [(ngModel)]="newUser.phone">
+                    </div>
+                    <div class="sign-up-username br">
+                        <label for="su-username"><span
+                                [ngStyle]="suUsername.invalid && suUsername.touched ? {'color':'red'}:{'color':'white'}">{{suUsername.invalid
+                                && suUsername.touched ? 'Username - Wrong input' : 'Username'}}</span></label>
+                        <input type="text" class="su-short" #suUsername="ngModel" required minlength="4" name="Username"
+                            id="su-username" [(ngModel)]="newUser.username">
+                    </div>
+                    <div class="sign-up-password br">
+                        <label for="su-password"><span
+                                [ngStyle]="suPassword.invalid && suPassword.touched ? {'color':'red'}:{'color':'white'}">{{suPassword.invalid
+                                && suPassword.touched ? 'Password - Wrong input' : 'Password'}}</span></label>
+                        <input type="password" class="su-short" #suPassword="ngModel" pattern="^[a-zA-Z0-9_]*$" required
+                            minlength="6" name="Password" id="su-password" [(ngModel)]="newUser.password">
+                    </div>
+                    
+                </div>
+            </form>
+            <a routerLink="home">
+                <button class="su-btn" [disabled]="signUpForm.invalid" (click)="signUp(newUser)">Sign up</button>
+            </a>
+        </div>
+    </div>
+</div>

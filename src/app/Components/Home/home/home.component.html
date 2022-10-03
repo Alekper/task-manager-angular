@@ -1,0 +1,22 @@
+<div id="home-main">
+    <div class="home-main">
+        <div class="left-container">
+            <img [src]='imgPath' class="home-pp" alt="profile-picture">
+            
+            <a routerLink="profile" class="fullname">{{fullName}}</a>
+            <h1 class="count">Number of tasks: {{taskCount}}</h1>
+        </div>
+        <div class="card-holder">
+           <div class="holder-div">
+            <ng-container class="card" #container>
+    
+            </ng-container>
+           </div>
+        </div>
+        <div class="right-container">
+            <button class="add-task" (click)="addTask()">Add task</button><br>
+    
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

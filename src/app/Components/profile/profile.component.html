@@ -1,0 +1,23 @@
+<div class="profile-container-main">
+    <section class="general-info">
+        <div class='name-container'>
+            <img [src]='imgSrc' alt="Profile" class="profile-picture" />
+            <h1 class="full-name">{{fullName}}</h1>
+        </div>
+    </section>
+    <section class="user-info">
+        <div class="user-control-info">
+
+        </div>
+        <div class="user-control">
+            <a routerLink="userinfo" class="org-user">User info</a>
+        <a routerLink="userlist" *ngIf="isAdmin"  class="org-user">User list</a>
+        <a routerLink="newuser" *ngIf="isAdmin" class="org-user">Create New user</a>
+        </div>
+        <div class="router">
+
+            <router-outlet></router-outlet>
+        </div>
+        <button class="log-out" (click)="logOut()">Log out</button>
+    </section>
+</div>

@@ -1,0 +1,41 @@
+<form #cardForm="ngForm" (ngSubmit)="cardData(cardForm.value)">
+    <div class="card">
+        <div class="title">
+            <ng-template #input><input type="text" name="title" class="title-input" placeholder="Task title..." ngModel>
+            </ng-template>
+            <ng-template #header>{{cardInfo.title}}</ng-template>
+            <div *ngIf="!dataStatus; then input else header"></div>
+            <button class="save-btn">Save</button>
+        </div>
+        <div class="deadline">
+            <input type="date" name="date" class="date-input" ngModel>
+            <span class="sp">|</span>
+            <div class="status">
+                <div class="select-target">
+
+                    <label for="target-user" class="resp-label">Responsible:</label>
+                    <select name="target" id="target-user" class="trg-user" multiple>
+                        <option value="" selected disabled hidden>Choose here</option>
+
+                        <option *ngFor="let user of userList" [value]="user.name">
+                            {{user.name}} </option>
+                    </select>
+                </div>
+                <span class="sp">|</span>
+
+                <div class="mt"><span class="status-txt">Status:</span>
+                    <input type="checkbox" name="status" class="checkbox-input" ngModel></div>
+            </div>
+        </div>
+        <div class="description">
+            <ng-template #text><textarea name="description" id="textDescription" cols="30" rows="7"
+                    placeholder="Task description..." ngModel></textarea></ng-template>
+            <ng-template #descrip>
+                <p class="text-data">{{cardInfo.description}}</p>
+            </ng-template>
+            <div *ngIf="!dataStatus; then text else descrip"></div>
+
+
+        </div>
+    </div>
+</form>

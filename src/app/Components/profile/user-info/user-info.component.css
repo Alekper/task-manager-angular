@@ -1,0 +1,29 @@
+.personal-info div {
+    width: 30vw;
+    background: linear-gradient(-45deg, #ee52ba, #5920c5, #fd2ada, #23d5a0);
+    animation: background-animation 15s ease infinite;
+    background-size: 400% 400%;
+    margin: 10px 0;
+    border-radius: 30px;
+    text-align: left;
+    padding: 0;
+    text-transform: none;
+    padding: 15px;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    min-width: 280px;
+
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+}
+
+.icon {
+    margin-right: 30px;
+}
