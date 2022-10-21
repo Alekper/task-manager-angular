@@ -1,4 +1,4 @@
-# SmartSolutions
+# Task Manager
 
 The task manager was made on Angular 14.  
 This project contains:  
